@@ -14,12 +14,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
-export default {
-  setup() {
+
     const router = useRouter();
     const username = ref('');
     const password = ref('');
@@ -38,14 +37,8 @@ export default {
       router.push({name: 'RegisterPage'});
     }
 
-    return {
-      username,
-      password,
-      login,
-      register,
-    };
-  },
-};
+    
+
 </script>
 
 <style scoped>
